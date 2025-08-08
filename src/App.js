@@ -3,6 +3,7 @@ import './App.css';
 import { Counter } from './components/Counter';
 import { List } from './components/List';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const listD = localStorage.getItem('listD');
@@ -33,6 +34,11 @@ function App() {
         theme="light"
         transition={Bounce}
       />
+      <Helmet>
+        <title>Counter & List</title>
+        {/* <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" /> */}
+    {/* <link rel="icon" href="%PUBLIC_URL%/logo.png" /> */}
+      </Helmet>
     </div>
   );
 }
