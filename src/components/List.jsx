@@ -50,7 +50,7 @@ export const List = ({ list, setList, listData }) => {
                             <p style={{ fontSize: '20px', width: '30px' }}>{e}</p>
                             <p>#{i + 1}</p>
                         </div>
-                        <button style={{ background: 'transparent', border: 'none', cursor: 'pointer', marginRight: '10px' }}><AiOutlineClose /></button>
+                        <button onClick={()=>{const newList = list?.filter((k)=>k!==e); localStorage.setItem('listD',newList); setList(newList)}} style={{ background: 'transparent', border: 'none', cursor: 'pointer', marginRight: '10px' }}><AiOutlineClose /></button>
                     </div>
                 ))}
             </div>
